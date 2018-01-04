@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 var getDotCount = function (spec) {
   var dots;
-  dots = Math.ceil(spec.slideCount / spec.slidesToScroll);
+  dots = Math.ceil(spec.slidecount / spec.slidesToScroll);
   return dots;
 };
 
@@ -20,7 +20,7 @@ export class Dots extends React.Component {
   render() {
 
     var dotCount = getDotCount({
-      slideCount: this.props.slideCount,
+      slidecount: this.props.slidecount,
       slidesToScroll: this.props.slidesToScroll
     });
 
@@ -32,14 +32,14 @@ export class Dots extends React.Component {
       var leftBound = (i * this.props.slidesToScroll);
       var rightBound = (i * this.props.slidesToScroll) + (this.props.slidesToScroll - 1);
       var className = classnames({
-        'slick-active': (this.props.currentSlide >= leftBound) && (this.props.currentSlide <= rightBound)
+        'slick-active': (this.props.currentslide >= leftBound) && (this.props.currentslide <= rightBound)
       });
 
       var dotOptions = {
         message: 'dots',
         index: i,
         slidesToScroll: this.props.slidesToScroll,
-        currentSlide: this.props.currentSlide
+        currentslide: this.props.currentslide
       };
 
       var onClick = this.clickHandler.bind(this, dotOptions);

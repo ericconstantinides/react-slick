@@ -13,7 +13,7 @@ export class PrevArrow extends React.Component {
     let prevClasses = {'slick-arrow': true, 'slick-prev': true};
     let prevHandler = this.clickHandler.bind(this, {message: 'previous'});
 
-    if (!this.props.infinite && (this.props.currentSlide === 0 || this.props.slideCount <= this.props.slidesToShow)) {
+    if (!this.props.infinite && (this.props.currentslide === 0 || this.props.slidecount <= this.props.slidesToShow)) {
       prevClasses['slick-disabled'] = true;
       prevHandler = null;
     }
@@ -26,8 +26,8 @@ export class PrevArrow extends React.Component {
       onClick: prevHandler
     };
     let customProps = {
-      currentSlide: this.props.currentSlide,
-      slideCount: this.props.slideCount
+      currentslide: this.props.currentslide,
+      slidecount: this.props.slidecount
     };
     let prevArrow;
 
@@ -64,8 +64,8 @@ export class NextArrow extends React.Component {
       onClick: nextHandler
     };
     let customProps = {
-      currentSlide: this.props.currentSlide,
-      slideCount: this.props.slideCount
+      currentslide: this.props.currentslide,
+      slidecount: this.props.slidecount
     };
     let nextArrow;
 

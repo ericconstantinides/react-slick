@@ -9,19 +9,19 @@ var getSlideClasses = (spec) => {
   var centerOffset, index;
 
   if (spec.rtl) {
-    index = spec.slideCount - 1 - spec.index;
+    index = spec.slidecount - 1 - spec.index;
   } else {
     index = spec.index;
   }
-  slickCloned = (index < 0) || (index >= spec.slideCount);
+  slickCloned = (index < 0) || (index >= spec.slidecount);
   if (spec.centerMode) {
     centerOffset = Math.floor(spec.slidesToShow / 2);
-    slickCenter = (index - spec.currentSlide) % spec.slideCount === 0;
-    if ((index > spec.currentSlide - centerOffset - 1) && (index <= spec.currentSlide + centerOffset)) {
+    slickCenter = (index - spec.currentslide) % spec.slidecount === 0;
+    if ((index > spec.currentslide - centerOffset - 1) && (index <= spec.currentslide + centerOffset)) {
       slickActive = true;
     }
   } else {
-    slickActive = (spec.currentSlide <= index) && (index < spec.currentSlide + spec.slidesToShow);
+    slickActive = (spec.currentslide <= index) && (index < spec.currentslide + spec.slidesToShow);
   }
   return classnames({
     'slick-slide': true,
@@ -41,7 +41,7 @@ var getSlideStyle = function (spec) {
   if (spec.fade) {
     style.position = 'relative';
     style.left = -spec.index * spec.slideWidth;
-    style.opacity = (spec.currentSlide === spec.index) ? 1 : 0;
+    style.opacity = (spec.currentslide === spec.index) ? 1 : 0;
     style.transition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase;
     style.WebkitTransition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase;
   }
@@ -68,7 +68,7 @@ var renderSlides = function (spec) {
       message: 'children',
       index: index,
       slidesToScroll: spec.slidesToScroll,
-      currentSlide: spec.currentSlide
+      currentslide: spec.currentslide
     };
 
     if (!spec.lazyLoad || (spec.lazyLoad && spec.lazyLoadedList.indexOf(index) >= 0)) {

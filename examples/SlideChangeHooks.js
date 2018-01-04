@@ -9,11 +9,11 @@ export default class SlideChangeHooks extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      beforeChange: function (currentSlide, nextSlide) {
-        console.log('before change', currentSlide, nextSlide);
+      beforeChange: function (currentslide, nextSlide) {
+        console.log('before change', currentslide, nextSlide);
       },
-      afterChange: function (currentSlide) {
-        console.log('after change', currentSlide);
+      afterChange: function (currentslide) {
+        console.log('after change', currentslide);
       },
     };
     return (

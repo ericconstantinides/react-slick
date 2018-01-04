@@ -25,7 +25,7 @@ export var InnerSlider = createReactClass({
   },
   getInitialState: function () {
     return Object.assign({}, initialState, {
-      currentSlide: this.props.initialSlide
+      currentslide: this.props.initialSlide
     });
   },
   getDefaultProps: function () {
@@ -40,7 +40,7 @@ export var InnerSlider = createReactClass({
     });
     var lazyLoadedList = [];
     for (var i = 0; i < React.Children.count(this.props.children); i++) {
-      if (i >= this.state.currentSlide && i < this.state.currentSlide + this.props.slidesToShow) {
+      if (i >= this.state.currentslide && i < this.state.currentslide + this.props.slidesToShow) {
         lazyLoadedList.push(i);
       }
     }
@@ -87,14 +87,14 @@ export var InnerSlider = createReactClass({
       this.changeSlide({
         message: 'index',
         index: nextProps.slickGoTo,
-        currentSlide: this.state.currentSlide
+        currentslide: this.state.currentslide
       });
-    } else if (this.state.currentSlide >= nextProps.children.length) {
+    } else if (this.state.currentslide >= nextProps.children.length) {
       this.update(nextProps);
       this.changeSlide({
         message: 'index',
         index: nextProps.children.length - nextProps.slidesToShow,
-        currentSlide: this.state.currentSlide
+        currentslide: this.state.currentslide
       });
     } else {
       this.update(nextProps);
@@ -123,7 +123,7 @@ export var InnerSlider = createReactClass({
     !isNaN(slide) && this.changeSlide({
       message: 'index',
       index: slide,
-      currentSlide: this.state.currentSlide
+      currentslide: this.state.currentslide
     });
   },
   render: function () {
@@ -138,26 +138,26 @@ export var InnerSlider = createReactClass({
       infinite: this.props.infinite,
       centerMode: this.props.centerMode,
       focusOnSelect: this.props.focusOnSelect ? this.selectHandler : null,
-      currentSlide: this.state.currentSlide,
+      currentslide: this.state.currentslide,
       lazyLoad: this.props.lazyLoad,
       lazyLoadedList: this.state.lazyLoadedList,
       rtl: this.props.rtl,
       slideWidth: this.state.slideWidth,
       slidesToShow: this.props.slidesToShow,
       slidesToScroll: this.props.slidesToScroll,
-      slideCount: this.state.slideCount,
+      slidecount: this.state.slidecount,
       trackStyle: this.state.trackStyle,
       variableWidth: this.props.variableWidth
     };
 
     var dots;
 
-    if (this.props.dots === true && this.state.slideCount >= this.props.slidesToShow) {
+    if (this.props.dots === true && this.state.slidecount >= this.props.slidesToShow) {
       var dotProps = {
         dotsClass: this.props.dotsClass,
-        slideCount: this.state.slideCount,
+        slidecount: this.state.slidecount,
         slidesToShow: this.props.slidesToShow,
-        currentSlide: this.state.currentSlide,
+        currentslide: this.state.currentslide,
         slidesToScroll: this.props.slidesToScroll,
         clickHandler: this.changeSlide,
         children: this.props.children,
@@ -172,8 +172,8 @@ export var InnerSlider = createReactClass({
     var arrowProps = {
       infinite: this.props.infinite,
       centerMode: this.props.centerMode,
-      currentSlide: this.state.currentSlide,
-      slideCount: this.state.slideCount,
+      currentslide: this.state.currentslide,
+      slidecount: this.state.slidecount,
       slidesToShow: this.props.slidesToShow,
       prevArrow: this.props.prevArrow,
       nextArrow: this.props.nextArrow,

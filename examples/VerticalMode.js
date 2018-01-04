@@ -10,11 +10,11 @@ export default class VerticalMode extends Component {
       slidesToScroll: 1,
       vertical: true,
       verticalSwiping: true,
-      beforeChange: function (currentSlide, nextSlide) {
-        console.log('before change', currentSlide, nextSlide);
+      beforeChange: function (currentslide, nextSlide) {
+        console.log('before change', currentslide, nextSlide);
       },
-      afterChange: function (currentSlide) {
-        console.log('after change', currentSlide);
+      afterChange: function (currentslide) {
+        console.log('after change', currentslide);
       },
     };
     return (

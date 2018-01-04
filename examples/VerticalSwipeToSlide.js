@@ -11,11 +11,11 @@ export default class VerticalSwipeToSlide extends Component {
       vertical: true,
       verticalSwiping: true,
       swipeToSlide: true,
-      beforeChange: function (currentSlide, nextSlide) {
-        console.log('before change', currentSlide, nextSlide);
+      beforeChange: function (currentslide, nextSlide) {
+        console.log('before change', currentslide, nextSlide);
       },
-      afterChange: function (currentSlide) {
-        console.log('after change', currentSlide);
+      afterChange: function (currentslide) {
+        console.log('after change', currentslide);
       },
     };
     return (

@@ -6,14 +6,14 @@ class SliderWithBeforeChange extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentSlide: null,
+      currentslide: null,
       nextSlide: null
     }
     this.beforeChange = this.beforeChange.bind(this)
   }
-  beforeChange(currentSlide, nextSlide) {
+  beforeChange(currentslide, nextSlide) {
     this.setState({
-      currentSlide,
+      currentslide,
       nextSlide
     })
   }
@@ -34,12 +34,12 @@ describe('Slider', function() {
     const wrapper = mount(<SliderWithBeforeChange />);
     wrapper.find('.slick-next').simulate('click')
     expect(wrapper.find('.slick-slide.slick-active').first().text()).toEqual('slide2');
-    expect(wrapper.state()).toEqual({currentSlide: 0, nextSlide: 1})
+    expect(wrapper.state()).toEqual({currentslide: 0, nextSlide: 1})
     wrapper.find('.slick-next').simulate('click')
     expect(wrapper.find('.slick-slide.slick-active').first().text()).toEqual('slide3');
-    expect(wrapper.state()).toEqual({currentSlide: 1, nextSlide: 2})
+    expect(wrapper.state()).toEqual({currentslide: 1, nextSlide: 2})
     wrapper.find('.slick-prev').simulate('click')
     expect(wrapper.find('.slick-slide.slick-active').first().text()).toEqual('slide2');
-    expect(wrapper.state()).toEqual({currentSlide: 2, nextSlide: 1})
+    expect(wrapper.state()).toEqual({currentslide: 2, nextSlide: 1})
   });
 });

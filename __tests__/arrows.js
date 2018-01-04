@@ -14,8 +14,8 @@ function CustomArrow(props) {
   return (
     <span
       className="sample"
-      data-currentSlide={props.currentSlide}
-      data-slideCount={props.slideCount} />
+      data-currentslide={props.currentslide}
+      data-slidecount={props.slidecount} />
   );
 }
 
@@ -35,7 +35,7 @@ describe('Previous arrows', () => {
   //   let elAttributes;
   //   let arr = <CustomArrow />
   //
-  //   const wrapper = render(<PrevArrow currentSlide={3} prevArrow={arr} slideCount={5} />);
+  //   const wrapper = render(<PrevArrow currentslide={3} prevArrow={arr} slidecount={5} />);
   //
   //   elAttributes = wrapper.find('.sample')[0].attribs;
   //   expect(elAttributes['data-currentslide']).toBe('3');
@@ -59,7 +59,7 @@ describe('Next arrows', () => {
   //   let elAttributes;
   //   let arr = <CustomArrow />
   //
-  //   const wrapper = render(<NextArrow currentSlide={6} nextArrow={arr} slideCount={9} />);
+  //   const wrapper = render(<NextArrow currentslide={6} nextArrow={arr} slidecount={9} />);
   //
   //   elAttributes = wrapper.find('.sample')[0].attribs;
   //   expect(elAttributes['data-currentslide']).toBe('6');
